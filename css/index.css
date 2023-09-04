@@ -1,0 +1,817 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #fffafa;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+header h1 {
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+  color: #222;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f00;
+}
+header h1 ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+header h1 ul li {
+  opacity: 0;
+  animation: projectTitle 3.4s linear infinite;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@keyframes projectTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header h1 ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+header h1 ul li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+header h1 ul li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+header h1 ul li:nth-child(4) {
+  animation-delay: 0.8s;
+}
+header h1 ul li:nth-child(5) {
+  animation-delay: 1s;
+}
+header h1 ul li:nth-child(6) {
+  animation-delay: 1.2s;
+}
+header h1 ul li:nth-child(7) {
+  animation-delay: 1.4s;
+}
+header h1 ul li:nth-child(8) {
+  animation-delay: 1.6s;
+}
+header h1 ul li:nth-child(9) {
+  animation-delay: 1.8s;
+}
+header h1 ul li:nth-child(10) {
+  animation-delay: 2s;
+}
+header h1 ul li:nth-child(11) {
+  animation-delay: 2.2s;
+}
+header h1 ul li:nth-child(12) {
+  animation-delay: 2.4s;
+}
+header h1 ul li:nth-child(13) {
+  animation-delay: 2.6s;
+}
+header h1 ul li:nth-child(14) {
+  animation-delay: 2.8s;
+}
+header h1 ul li:nth-child(15) {
+  animation-delay: 3s;
+}
+header h1 ul li:nth-child(16) {
+  animation-delay: 3.2s;
+}
+
+main {
+  width: 100%;
+  min-height: 80vh;
+  display: block;
+}
+main .btns-part {
+  margin-top: 10px;
+}
+main .btns-part ul {
+  gap: 50px;
+  justify-content: center;
+  text-align: center;
+}
+main .btns-part ul li .btn {
+  width: 100px;
+  height: auto;
+  border: 1px solid #666;
+  font-size: 16px;
+  padding: 10px;
+  position: relative;
+  font-weight: 500;
+}
+main .btns-part ul li .btn.btnAnim-1 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff9f8e;
+  z-index: -1;
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.4s;
+}
+main .btns-part ul li .btn.btnAnim-1:hover::before {
+  transform: rotate(0);
+}
+main .btns-part ul li .btn.btnAnim-2 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-2::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff9f8e;
+  z-index: -1;
+  transform-origin: left top;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.4s;
+}
+main .btns-part ul li .btn.btnAnim-2:hover::before {
+  height: 100%;
+}
+main .btns-part ul li .btn.btnAnim-3 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-3::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff9f8e;
+  z-index: -1;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.4s;
+}
+main .btns-part ul li .btn.btnAnim-3:hover::before {
+  width: 100%;
+  height: 100%;
+}
+main .btns-part ul li .btn.btnAnim-4 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-4::before {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #ff9f8e;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.4s;
+}
+main .btns-part ul li .btn.btnAnim-4:hover::before {
+  width: 100%;
+  height: 100%;
+}
+main .btns-part ul li .btn.btnAnim-5 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-5::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff9f8e;
+  z-index: -1;
+  transform: rotateX(90deg);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-5::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff9f8e;
+  z-index: -1;
+  transform: rotateY(90deg);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-5:hover::before, main .btns-part ul li .btn.btnAnim-5:hover::after {
+  transform: rotateX(0);
+}
+main .btns-part ul li .btn.btnAnim-6 {
+  overflow: hidden;
+  width: 80px;
+  letter-spacing: -1px;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.4s;
+}
+main .btns-part ul li .btn.btnAnim-6:hover {
+  width: 120px;
+  letter-spacing: 5px;
+}
+main .btns-part ul li .btn.btnAnim-7 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-7::before {
+  content: "hey there!";
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff9f8e;
+  z-index: 1;
+  transform: translate(0, -100%);
+  overflow: hidden;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.4s;
+}
+main .btns-part ul li .btn.btnAnim-7:hover::before {
+  height: 100%;
+  transform: translate(0, 0);
+}
+main .btns-part ul li .btn.btnAnim-8 {
+  overflow: hidden;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-8::before {
+  content: "";
+  width: 30px;
+  height: 150%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  transform: translate(-50px, -20%) rotate(-30deg);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-8:hover::before {
+  transform: translate(120px, -20%) rotate(-30deg);
+}
+main .btns-part ul li .btn.btnAnim-8:hover {
+  background-color: #790000;
+  color: #fff;
+}
+main .btns-part ul li .btn.btnAnim-9 {
+  overflow: hidden;
+  height: 40px;
+}
+main .btns-part ul li .btn.btnAnim-9::before {
+  content: "Button 9";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-9::after {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transform: translate(-100px, 40px);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-9:hover::before {
+  transform: translate(100px, -40px);
+}
+main .btns-part ul li .btn.btnAnim-9:hover::after {
+  transform: translate(0, 0);
+}
+main .btns-part ul li .btn.btnAnim-10 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-10::before {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  transform: scale(2);
+  opacity: 0;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-10:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-11 {
+  overflow: hidden;
+}
+main .btns-part ul li .btn.btnAnim-11::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff6347;
+  z-index: -1;
+  transform-origin: top left;
+  border-radius: 0 0 20px 20px;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-11:hover::before {
+  height: 150%;
+  color: #fff;
+}
+main .btns-part ul li .btn.btnAnim-12::before {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff6347;
+  z-index: 1;
+  transform-origin: top center;
+  transform: rotateX(270deg);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-12:hover::before {
+  transform: rotateX(0deg);
+}
+main .btns-part ul li .btn.btnAnim-13 {
+  overflow: hidden;
+  height: 45px;
+}
+main .btns-part ul li .btn.btnAnim-13::before {
+  content: "Button 13";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #ff6347;
+  transform: translate(0, 0) rotateX(0);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-13::after {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #008000;
+  z-index: 1;
+  transform: translate(-100px, 0) rotateX(360deg);
+  opacity: 0;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+}
+main .btns-part ul li .btn.btnAnim-13:hover::before {
+  transform: translate(100px, 0) rotateX(360deg);
+  opacity: 0;
+}
+main .btns-part ul li .btn.btnAnim-13:hover::after {
+  transform: translate(0, 0) rotateX(0);
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-14 {
+  overflow: hidden;
+  height: 45px;
+}
+main .btns-part ul li .btn.btnAnim-14::before {
+  content: "Button 14";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #ff6347;
+  transform: translate(0, 0) rotate(0);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-14::after {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #008000;
+  z-index: 1;
+  transform: translate(-100px, 0) rotate(360deg);
+  opacity: 0;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+}
+main .btns-part ul li .btn.btnAnim-14:hover::before {
+  transform: translate(100px, 0) rotate(360deg);
+  opacity: 0;
+}
+main .btns-part ul li .btn.btnAnim-14:hover::after {
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-15 {
+  overflow: hidden;
+  height: 45px;
+}
+main .btns-part ul li .btn.btnAnim-15::before {
+  content: "Button 15";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #ff6347;
+  transform: translate(0, 0) rotate(0) skew(0);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-15::after {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #008000;
+  z-index: 1;
+  transform: translate(-100px, 0) rotate(360deg) skew(360deg);
+  opacity: 0;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+}
+main .btns-part ul li .btn.btnAnim-15:hover::before {
+  transform: translate(100px, 0) rotate(360deg) skew(360deg);
+  opacity: 0;
+}
+main .btns-part ul li .btn.btnAnim-15:hover::after {
+  transform: translate(0, 0) rotate(0) skew(0);
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-16 {
+  overflow: hidden;
+  height: 45px;
+}
+main .btns-part ul li .btn.btnAnim-16::before {
+  content: "Button 16";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #ff6347;
+  transform: translate(0, 0) rotateY(0);
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-16::after {
+  content: "done !";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #008000;
+  z-index: 1;
+  transform: translate(-100px, 0) rotateY(360deg);
+  opacity: 0;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+  color: #fff;
+}
+main .btns-part ul li .btn.btnAnim-16:hover::before {
+  transform: translate(100px, 0) rotateY(360deg);
+  opacity: 0;
+}
+main .btns-part ul li .btn.btnAnim-16:hover::after {
+  transform: translate(0, 0) rotateY(0);
+  opacity: 1;
+}
+main .btns-part ul li .btn.btnAnim-17 {
+  overflow: hidden;
+  --wekit-transition: $property $duration;
+  --ms-transition: $property $duration;
+  --o-transition: $property $duration;
+  transition: all 0.7s;
+}
+main .btns-part ul li .btn.btnAnim-17::before {
+  content: "";
+  width: 22px;
+  height: 180%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #ff6347;
+  transform: translate(-40px, -20px) rotate(-30deg);
+  color: #fff;
+  animation: btn17 0.7s linear infinite;
+}
+@keyframes btn17 {
+  100% {
+    transform: translate(150px, -20px) rotate(-30deg);
+  }
+}
+main .btns-part ul li .btn.btnAnim-17:hover::before {
+  animation: btn17_before 0.7s alternate forwards;
+}
+@keyframes btn17_before {
+  50% {
+    transform: translate(75px, -20px) rotate(-15deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 0;
+  }
+}
+main .btns-part ul li .btn.btnAnim-17:hover {
+  background-color: #630f00;
+  color: #fff;
+}
+main .bgStreetPics {
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main .bgStreetPics #bgStreet {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-image: url("/Images/bg.jpg");
+  background-size: cover;
+}
+main .bgStreetPics #bgStreet::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/Images/rain.png");
+  background-position: 0 0;
+  animation: rain 0.4s linear infinite;
+}
+@keyframes rain {
+  25%, 75% {
+    background-position: -10% 100%;
+  }
+  50%, 100% {
+    background-position: 22% 100%;
+  }
+}
+@media (min-width: 460px) and (max-width: 575.98px) {
+  @keyframes rain {
+    25%, 75% {
+      background-position: 200% 100%;
+    }
+    50%, 100% {
+      background-position: -100% 95%;
+    }
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @keyframes rain {
+    25%, 75% {
+      background-position: 200% 100%;
+    }
+    50%, 100% {
+      background-position: -100% 90%;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @keyframes rain {
+    25%, 75% {
+      background-position: -30% 100%;
+    }
+    50%, 100% {
+      background-position: 22% 100%;
+    }
+  }
+}
+main .bgStreetPics .miniPics {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main .bgStreetPics .miniPics #car {
+  width: 130px;
+  height: auto;
+  display: block;
+  transform: translate(-100%, 100px);
+  animation: bgStreetCar 3s linear infinite;
+}
+@keyframes bgStreetCar {
+  100% {
+    transform: translate(1500%, 100px);
+  }
+}
+main .bgStreetPics .miniPics #motoBike {
+  width: 100px;
+  height: auto;
+  display: block;
+  transform: translate(-100%, 0);
+  animation: bgStreetMoto 4s linear infinite;
+}
+@keyframes bgStreetMoto {
+  100% {
+    transform: translate(1500%, 0);
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 10px;
+  padding: 20px 0;
+}
+footer h6, footer p {
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 0;
+}/*# sourceMappingURL=index.css.map */
